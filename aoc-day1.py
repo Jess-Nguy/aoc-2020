@@ -211,3 +211,4 @@ for z in num2020:
     multipleNum = z[0] * z[1]
     print("SHOW ALL * NUMBER: ", multipleNum)
 print("SHOW ALL NUMBER: ", num2020)
+# This can be done better to not should the matching numbers twice.

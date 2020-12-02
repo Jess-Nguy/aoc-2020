@@ -201,14 +201,21 @@ data = [2004,
 
 data2 = data.copy()
 num2020 = []
+three_sum_2020 = []
 for x in data:
     for y in data2:
         addNum = x + y
         if addNum == 2020:
-            num2020.append([x, y])
-
-for z in num2020:
-    multipleNum = z[0] * z[1]
-    print("SHOW ALL * NUMBER: ", multipleNum)
+            multiplyNum = x*y
+            if multiplyNum not in num2020:
+                num2020.append([multiplyNum])
+        if addNum < 2020:
+            third_sum = 2020 - addNum
+            if third_sum in data:
+                multiplyNum = x*y*third_sum
+                if multiplyNum not in three_sum_2020:
+                    three_sum_2020.append([multiplyNum])
 print("SHOW ALL NUMBER: ", num2020)
+print("SHOW ALL 3 SUM FOR 2020: ", three_sum_2020)
 # This can be done better to not should the matching numbers twice.
+# This doesn't consider the fact that the number could add 1010 if it was in there to not be considered if there's only 1 number.
